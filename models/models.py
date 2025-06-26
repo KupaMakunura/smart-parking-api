@@ -44,3 +44,33 @@ class ParkingStatus(BaseModel):
     available_slots: int
     occupancy_percentage: float
     updated_at: str
+
+
+class SimulationVehicleData(BaseModel):
+    vehicles: List[VehicleData]
+    allocation_strategy: str = Field(
+        ..., description="Strategy to use: 'sequential', 'random', 'algorithm'"
+    )
+
+
+class AllocationResult(BaseModel):
+    vehicle_plate_num: str
+    status: str
+    bay_assigned: Optional[int] = None
+    slot_assigned: Optional[int] = None
+    allocation_score: Optional[float] = None
+    allocation_time: Optional[str] = None
+    error_message: Optional[str] = None
+
+
+class SimulationResults(BaseModel):
+    strategy: str
+    total_vehicles: int
+    successful_allocations: int
+    failed_allocations: int
+    success_rate: float
+    average_allocation_score: Optional[float] = None
+    total_processing_time: float
+    allocation_results: List[AllocationResult]
+    final_parking_status: ParkingStatus
+    database_file: str

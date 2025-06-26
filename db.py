@@ -8,6 +8,7 @@ class ParkingDatabase:
         self.db = TinyDB(db_path, encoding="utf-8", ensure_ascii=False)
         self.allocations = self.db.table("allocations")
         self.encoder_class = encoder_class
+        self.VehicleQuery = Query()
 
     def create_allocation(self, allocation_data):
         # Convert NumPy types to Python native types if needed

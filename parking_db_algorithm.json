@@ -1,0 +1,1 @@
+{"allocations": {"1": {"vehicle_plate_num": "GOV1234", "vehicle_plate_type": 2, "vehicle_type": 0, "bay_assigned": 2, "slot_assigned": 2, "allocation_score": 209.05664370475054, "allocation_time": "2023-05-02T08:30:00", "departure_time": "2023-05-02T10:30:00", "priority_level": 3, "is_active": true}}}

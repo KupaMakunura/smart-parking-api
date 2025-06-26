@@ -1,0 +1,8 @@
+{
+  "vehicle_plate_num": "ABC1234",
+  "vehicle_plate_type": 0,
+  "vehicle_type": 0,
+  "arrival_time": "2025-06-26T09:30:00",
+  "departure_time": "2025-06-26T17:30:00",
+  "priority_level": 1
+}
